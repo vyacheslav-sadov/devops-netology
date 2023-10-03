@@ -1,7 +1,7 @@
-![Скриншот_1](https://github.com/vyacheslav-sadov/devops-netology/blob/WM_branch/Задача_1.png "Задача № 1")
+![Задача_1](https://github.com/vyacheslav-sadov/devops-netology/blob/WM_branch/1.png)
 
-![Скриншот_2](https://github.com/vyacheslav-sadov/devops-netology/blob/WM_branch/Задача_2.png "Задача № 2")
+![Задача_2](https://github.com/vyacheslav-sadov/devops-netology/blob/WM_branch/2.png)
 
-![Скриншот_3](https://github.com/vyacheslav-sadov/devops-netology/blob/WM_branch/Задача_3.png "Задача № 3")
+![Задача_3](https://github.com/vyacheslav-sadov/devops-netology/blob/WM_branch/3.png)
 
-![Скриншот_4](https://github.com/vyacheslav-sadov/devops-netology/blob/WM_branch/Задача_4.png "Задача № 4")
+![Задача_4](https://github.com/vyacheslav-sadov/devops-netology/blob/WM_branch/4.png)
