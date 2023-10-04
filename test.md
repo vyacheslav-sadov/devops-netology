@@ -1,7 +1,1 @@
-test
-add the second line
-add the third line
-add experiment
-1
-2
-3
+![Задача_5](https://github.com/vyacheslav-sadov/devops-netology/blob/WM_branch/Task_5.png "Тестовая задача")
