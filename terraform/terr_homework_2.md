@@ -16,3 +16,50 @@
 ![Скриншот_2](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/2.png)
 скриншот успешного подключения к консоли ВМ через ssh:
 ![Скриншот_3](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/3.png)
+
+**Задание № 2**
+
+- Изучите файлы проекта.
+- Замените все хардкод-значения для ресурсов yandex_compute_image и yandex_compute_instance на отдельные переменные. К названиям переменных ВМ добавьте в начало префикс vm_web_ . Пример: vm_web_name.
+- Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их default прежними значениями из main.tf.
+- Проверьте terraform plan. Изменений быть не должно.
+
+![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/task_2.png)
+![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/task_2(1).png)
+
+**Задание № 3**
+
+- Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные первой ВМ.
+- Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: "netology-develop-platform-db" , cores = 2, memory = 2, core_fraction = 20. Объявите её переменные с префиксом vm_db_ в том же файле ('vms_platform.tf').
+- Примените изменения.
+
+![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/task_3.png)
+
+**Задание № 4**
+
+- Объявите в файле outputs.tf output типа map, содержащий { instance_name = external_ip } для каждой из ВМ. Примените изменения.
+В качестве решения приложите вывод значений ip-адресов команды terraform output.
+
+![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/task_4.png)
+
+**Задание № 5**
+
+- В файле locals.tf опишите в одном local-блоке имя каждой ВМ, используйте интерполяцию ${..} с несколькими переменными по примеру из лекции.
+- Замените переменные с именами ВМ из файла variables.tf на созданные вами local-переменные.
+- Примените изменения.
+
+![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/task_5(1).png)
+![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/task_5.png)
+
+**Задание № 6**
+
+- Вместо использования трёх переменных ".._cores",".._memory",".._core_fraction" в блоке resources {...}, объедините их в переменные типа map с именами "vm_web_resources" и "vm_db_resources". В качестве продвинутой практики попробуйте создать одну map-переменную vms_resources и уже внутри неё конфиги обеих ВМ — вложенный map.
+- Также поступите с блоком metadata {serial-port-enable, ssh-keys}, эта переменная должна быть общая для всех ваших ВМ.
+- Найдите и удалите все более не используемые переменные проекта.
+- Проверьте terraform plan. Изменений быть не должно.
+
+![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/task_6.png)
+![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/task_6(1).png)
+![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/task_6(2).png)
+![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/task_6(3).png)
+
