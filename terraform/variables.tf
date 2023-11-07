@@ -13,7 +13,7 @@ variable "folder_id" {
   type        = string
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id"
 }
-  
+
 variable "default_zone" {
   type        = string
   default     = "ru-central1-a"
@@ -24,7 +24,7 @@ variable "default_cidr" {
   default     = ["10.0.1.0/24"]
   description = "https://cloud.yandex.ru/docs/vpc/operations/subnet-create"
 }
-  
+
 variable "vpc_name" {
   type        = string
   default     = "develop"
@@ -38,19 +38,25 @@ variable "vm_web_resource_name" {
   type        = string
   default     = "platform"
 }
+
 variable "vm_db_resource_name" {
   type        = string
   default     = "platform"
 }
+
 variable "vm_web_name" {
   type        = string
   default     = "netology-develop-platform-web"
 }
-
 variable "vm_web_platform_id" {
   type        = string
   default     = "standard-v1"
 }
+variable "vm_web_role-web" {
+  type        = string.
+  default     = "web"
+}
+
 #variable "vm_web_cores" {
 #  type        = number
 #  default     = 2.
@@ -63,6 +69,7 @@ variable "vm_web_platform_id" {
 #  type        = number
 #  default     = 5
 #}
+
 variable "vm_web_resources" {
   type          = map
   default       = {
@@ -71,7 +78,7 @@ variable "vm_web_resources" {
   core_fraction = 5
   }
 }
-  
+
 variable "vm_web_preemptible" {
   type        = bool
   default     = true
@@ -81,10 +88,9 @@ variable "vm_web_nat" {
   default     = true
 }
 #variable "vm_web_serial-port-enable" {
-# type        = number
-# default     = 1
+#  type        = number
+#  default     = 1
 #}
-
 ###ssh vars
 
 #variable "vms_ssh_root_key" {

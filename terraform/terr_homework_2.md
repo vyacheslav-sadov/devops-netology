@@ -42,14 +42,20 @@
 
 ![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/screenshots/task_4.png)
 
+Ссылка на файл: https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/outputs.tf
+
 **Задание № 5**
 
 - В файле locals.tf опишите в одном local-блоке имя каждой ВМ, используйте интерполяцию ${..} с несколькими переменными по примеру из лекции.
 - Замените переменные с именами ВМ из файла variables.tf на созданные вами local-переменные.
 - Примените изменения.
 
-![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/screenshots/task_5(1).png)
 ![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/screenshots/task_5.png)
+
+Ссылки на код: 
+https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/main.tf
+https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/locals.tf
+
 
 **Задание № 6**
 
@@ -58,8 +64,8 @@
 - Найдите и удалите все более не используемые переменные проекта.
 - Проверьте terraform plan. Изменений быть не должно.
 
-![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/screenshots/task_6.png)
-![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/screenshots/task_6(1).png)
-![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/screenshots/task_6(2).png)
-![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/screenshots/task_6(3).png)
+Ссылки на код: 
+https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/main.tf
+https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/variables.tf
+https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/vms_platform.tf
 
