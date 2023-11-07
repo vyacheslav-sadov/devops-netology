@@ -42,7 +42,7 @@
 
 ![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/screenshots/task_4.png)
 
-Ссылка на файл: https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/outputs.tf
+Ссылка на код: https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/outputs.tf
 
 **Задание № 5**
 
@@ -52,9 +52,9 @@
 
 ![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/screenshots/task_5.png)
 
-Ссылки на код: 
-https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/main.tf
-https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/locals.tf
+Ссылки на код:
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/main.tf
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/locals.tf
 
 
 **Задание № 6**
@@ -65,7 +65,7 @@ https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/
 - Проверьте terraform plan. Изменений быть не должно.
 
 Ссылки на код: 
-https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/main.tf
-https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/variables.tf
-https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/vms_platform.tf
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/main.tf
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/variables.tf
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/vms_platform.tf
 
