@@ -1,4 +1,4 @@
-**Задание 1**
+**Задание № 1**
 1. Изучите проект.
 2. Заполните файл personal.auto.tfvars.
 3. Инициализируйте проект, выполните код. Он выполнится, даже если доступа к preview нет.
@@ -19,11 +19,12 @@
 5. Инициализируйте проект, выполните код.
 
 Ссылки на код: 
-- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/count-vm.tf
-- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/for_each-vm.tf
-- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/locals.tf
-- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/variables.tf
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-03/terraform/count-vm.tf
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-03/terraform/for_each-vm.tf
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-03/terraform/locals.tf
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-03/terraform/variables.tf
 
+Ссылки на изображения:
 - https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-03/terraform/images/vm_task_2.png
 - https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-03/terraform/images/disk_task_2.png
 
@@ -32,7 +33,8 @@
 1. Создайте 3 одинаковых виртуальных диска размером 1 Гб с помощью ресурса yandex_compute_disk и мета-аргумента count в файле disk_vm.tf .
 2. Создайте в том же файле одиночную(использовать count или for_each запрещено из-за задания №4) ВМ c именем "storage" . Используйте блок dynamic secondary_disk{..} и мета-аргумент for_each для подключения созданных вами дополнительных дисков.
 
-- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/disk_vm.tf
+Ссылка на код: 
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-03/terraform/disk_vm.tf
 
 **Задание № 4**
 
@@ -42,6 +44,9 @@
 
 - Для общего зачёта создайте в вашем GitHub-репозитории новую ветку terraform-03. Закоммитьте в эту ветку свой финальный код проекта, пришлите ссылку на коммит.
 
-- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/hosts.tftpl
-- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-02/terraform/ansible.tf
+Ссылки на код: 
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-03/terraform/hosts.tftpl
+- https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-03/terraform/ansible.tf
+
+Ссылка на изображение с файлом "hosts.cfg"
 - https://github.com/vyacheslav-sadov/devops-netology/blob/terraform-03/terraform/images/hosts.png
