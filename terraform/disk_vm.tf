@@ -16,9 +16,9 @@ resource "yandex_compute_instance" "storage" {
     core_fraction = var.vm_web_resources.core_fraction
   }
   dynamic "secondary_disk" {
-    for_each = { for n in yandex_compute_disk.virtual_disk[*]: n.name => n }
+    for_each = yandex_compute_disk.virtual_disk[*].id
     content {
-      disk_id = secondary_disk.value.id
+      disk_id = secondary_disk.value
     }
   }
   boot_disk {

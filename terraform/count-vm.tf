@@ -3,10 +3,10 @@ data "yandex_compute_image" "vm_web_family" {
 }
 resource "yandex_compute_instance" "web" {
 
-  name        = "netology-develop-platform-web-${var.test[count.index]}"
+  name        = "netology-develop-platform-web-${count.index+1}"
   platform_id = var.vm_web_platform_id
 
-  count = length(var.test)
+  count = 2
 
   resources {
     cores         = var.vm_web_resources.core
