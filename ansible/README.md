@@ -89,6 +89,23 @@ NAME: local
 ```
 
 10. В `prod.yml` добавьте новую группу хостов с именем `local`, в ней разместите `localhost` с необходимым типом подключения.
+Редактируем файл inventory/prod.yml: 
+```
+---
+  el:
+    hosts:
+      centos7:
+        ansible_connection: docker
+  deb:
+    hosts:
+      ubuntu:
+        ansible_connection: docker
+  local:
+    hosts:
+      localhost:
+        ansible_connection: local
+```
+
 11. Запустите playbook на окружении `prod.yml`. При запуске ansible должен запросить у вас пароль. Убедитесь, что факты `some_fact` для каждого из хостов определены из верных group_vars.
 ![Скриншот](https://github.com/vyacheslav-sadov/devops-netology/blob/master/ansible/images/task_11.png)
 
