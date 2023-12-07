@@ -1,0 +1,13 @@
+clickhouse:
+  hosts:
+    clickhouse-01:
+      ansible_host: "51.250.120.218"
+      ansible_user: "admin"
+vector:
+  hosts:
+    vector-01:
+      ansible_host: "51.250.121.178"
+      ansible_user: admin
+      ansible_become: yes
+      vector_version: "0.34.1-1"
+      test: "this is my test"
