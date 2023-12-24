@@ -1,3 +1,45 @@
+- name: Install nginx
+  hosts: lighthouse
+  handlers:
+    - name: start-nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+    - name: reload-nginx
+      service:
+        name: nginx
+        state: reloaded
+  tasks:
+    - name: NGINX | Install epel-release
+      ansible.builtin.yum:
+        name: epel-release
+        state: latest
+    - name: NGINX | Install NGINX
+      ansible.builtin.yum:
+        name: nginx
+        state: present
+      notify: start-nginx
+
+- name: Install lighthouse
+  hosts: lighthouse
+  pre_tasks:
+    - name: Lighthouse | install dependencies
+      ansible.builtin.yum:
+        name:
+          - git
+          - java-11-openjdk
+        state: present
+  tasks:
+    - name: clean nginx workdir
+      shell: rm -rf {{ lighthouse_location_dir }}/*
+    - name: Lighthouse | Copy from git
+      git:
+        repo: "{{ lighthouse_vcs }}"
+        version: master
+        dest: "{{ lighthouse_location_dir }}"
+        force: true
+
 - name: Install Clickhouse
   hosts: clickhouse
   handlers:
@@ -13,11 +55,13 @@
             url: "https://packages.clickhouse.com/rpm/stable/{{ item }}-{{ clickhouse_version }}.x86_64.rpm"
             dest: "./{{ item }}-{{ clickhouse_version }}.rpm"
           with_items: "{{ clickhouse_packages }}"
+          check_mode: false
       rescue:
         - name: Get clickhouse distrib
           ansible.builtin.get_url:
             url: "https://packages.clickhouse.com/rpm/stable/clickhouse-common-static-{{ clickhouse_version }}.x86_64.rpm"
             dest: "./clickhouse-common-static-{{ clickhouse_version }}.rpm"
+          check_mode: false
     - name: Install clickhouse packages
       become: true
       ansible.builtin.yum:
@@ -27,7 +71,7 @@
           - clickhouse-server-{{ clickhouse_version }}.rpm
       notify: Start clickhouse service
     - name: Flush handlers
-      meta: flush_handlers
+      ansible.builtin.meta: flush_handlers
     - name: Create database
       ansible.builtin.command: "clickhouse-client -q 'create database logs;'"
       register: create_db
@@ -41,7 +85,7 @@
       service:
         name: vector
         state: restarted
-
+        
   tasks:
     - name: Get vector distrib
       get_url:

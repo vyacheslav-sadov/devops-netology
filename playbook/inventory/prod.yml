@@ -1,12 +1,20 @@
 clickhouse:
   hosts:
     clickhouse-01:
-      ansible_host: "51.250.120.218"
+      ansible_host: "84.201.185.114"
       ansible_user: "admin"
+lighthouse:
+  hosts:
+    lighthouse-01:
+      ansible_host: "84.201.185.96"
+      ansible_user: admin
+      ansible_become: true
+      lighthouse_vcs: https://github.com/VKCOM/lighthouse.git
+      lighthouse_location_dir: /usr/share/nginx/html
 vector:
   hosts:
     vector-01:
-      ansible_host: "51.250.121.178"
+      ansible_host: "51.250.121.76"
       ansible_user: admin
       ansible_become: yes
       vector_version: "0.34.1-1"
